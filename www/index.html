@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="libs/font-icon/css/font-icon.min.css"/>
+		<link rel="stylesheet" href="libs/animate.min.css"/>
+		<link rel="stylesheet" href="css/index.css"/>
+	</head>
+	<body>
+		<nav id="site-nav">
+			<div class="sn-container">
+				<span>欢迎光临淘嘟嘟!</span>
+				<span><a href="" id="sn-login">请登录</a></span>
+				<span><a href="" id="register">免费注册</a></span>
+				<ul class="sn-quick-menu">
+					<li class="sn-myInfo sn-fold">
+						<a href="">我的信息</a>
+						<i class="fa fa-angle-down"></i>
+						<div id="sn-myInfo-fold">
+							<a href="">已买到的宝贝</a>
+							<a href="">我的地址管理</a>
+						</div>
+					</li>
+					<li class="sn-fa-red">
+						<i class="fa fa-heart"></i>
+						<a href="">我关注的店铺</a>
+					</li>
+					<li class="sn-fa-red">
+						<i class="fa fa-shopping-cart"></i>
+						<a href="">购物车</a>
+					</li>
+					<li class="sn-fold">
+						<a href="">收藏夹</a>
+						<i class="fa fa-angle-down"></i>
+						<div id="favorite-fold">
+							<a href="">收藏的宝贝</a>
+							<a href="">收藏的店铺</a>
+						</div>
+					</li>
+					<li id="vertical-line">
+						<span>|</span>
+					</li>
+					<li class=" sn-fold">
+						<i class="fa fa-mobile-phone sn-fa-red"></i>
+						<a href="">手机版</a>
+						<i class="fa fa-angle-down"></i>
+						<div id="client">
+							<a href="">手机客户端</a>
+							<a href="" id="QRcode"></a>
+						</div>
+					</li>
+					<li class="sn-fold">
+						<a href="">商家支持</a>
+						<i class="fa fa-angle-down"></i>
+						<div id="seller">
+							<section>
+								<h5>商家：</h5>
+								<a href="">平台总则</a>
+								<a href="">退货规则</a>
+							</section>
+							<section>
+								<h5>帮助：</h5>
+								<a href="">帮助中心</a>
+							</section>	
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div id="header">
+			<div class="w1210 flex">
+				<div id="mall-logo">
+					<a href=""></a>
+				</div>
+				<div id="mall-logo-right">
+					<a href=""></a>
+				</div>
+				<div class="mall-search">
+					<div id="search-box">
+						<ul class="search-type">
+							<li>宝贝</li>
+							<li class="cur-type">店铺</li>
+							<i class="fa fa-angle-down"></i>
+						</ul>
+						<form id="search-form">
+							<input type="text" name="" id="keyword" autocomplete="off" placeholder="请输入关键字"/>
+							<input type="button" name="search-btn" id="search-btn" value="搜&nbsp;索"/>
+						</form>
+					</div>
+					<ul class="hot-query">
+						<li><a href="">爱他美</a></li>
+						<li>|</li>
+						<li><a href="">牛栏</a></li>
+						<li>|</li>
+						<li><a href="">奶粉</a></li>
+						<li>|</li>
+						<li><a href="">纸尿裤</a></li>
+						<li>|</li>
+						<li><a href="">韩国</a></li>
+						<li>|</li>
+						<li><a href="">德国</a></li>
+						<li>|</li>
+						<li><a href="">食品</a></li>
+						<li>|</li>
+						<li><a href="">化妆品</a></li>
+					</ul>
+				</div>
+				<ul class="header-right">
+					<li><a href=""><img src="img/7day.jpg"/></a></li>
+					<li><a href=""><img src="img/guarantee.jpg"/></a></li>
+					<li><a href=""><img src="img/delivery.jpg"/></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="all-nav">
+			<div class="w1210">
+				<div class="all-nav-bar">
+					<div class="all-classify">
+						<a href="">全部商品分类</a>
+					</div>
+					<ul class="classify">
+						<li><a href="">首页</a></li>
+						<li><a href="">食品/酒水/生鲜</a></li>
+						<li><a href="">奶粉</a></li>
+						<li><a href="">化妆个护</a></li>
+						<li><a href="">店铺街</a></li>
+						<li><a href="">折扣专区</a></li>
+						<li><a href="">最新动态</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<!--*****-->
+		<div class="all-banner">				
+			<div class="main-banner w1210">
+				<ul class="all-cate">
+					<li><a href="">食品/酒水/生鲜</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">母婴/玩具乐器</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">化妆个护</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">家居/家具/家装/厨具/家纺</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">手机/数码</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">鞋靴/箱包/钟表/礼品</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">男装/女装/内衣/装饰</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">家用电器</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">营养保健</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">电脑办公</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">汽车及配件装饰</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">户外运动</a><i class="fa fa-angle-right"></i></li>
+					<li><a href="">旅行/婚庆/线下服务</a><i class="fa fa-angle-right"></i></li>
+				</ul>
+				<div id="carousel-box">
+					<!--轮播图-->
+					<section id="carousel">
+						<a href="">
+							<img src="img/carousel/20161026jwlhvy.jpg"/>
+						</a>
+						<a href="">
+							<img src="img/carousel/20161101mrekqv.jpg"/>
+						</a>
+						<a href="">
+							<img src="img/carousel/20161019loikjt.jpg"/>
+						</a>
+						<a href="">
+							<img src="img/carousel/20161024dcndiy.jpg"/>
+						</a>
+						<a href="">
+							<img src="img/carousel/20161013ircgbo.jpg"/>
+						</a>
+						<a href="">
+							<img src="img/carousel/20161013hgylly.jpg"/>
+						</a>
+						<a href="">
+							<img src="img/carousel/20161009jwgqbc.jpg"/>
+						</a>	
+						<a href="">
+							<img src="img/carousel/20161026jwlhvy.jpg"/>
+						</a>					
+						<div id="pl">
+							<span class="point"></span>
+							<span class="point"></span>
+							<span class="point"></span>
+							<span class="point"></span>
+							<span class="point"></span>
+							<span class="point"></span>
+							<span class="point"></span>
+						</div>
+					</section>
+					<div class="trigeminy">
+						<section>
+							<a href="">
+								<img src="img/trigeminy/1476156826339504997.jpg"/>
+							</a>
+						</section>
+						<section>
+							<a href="">
+								<img src="img/trigeminy/1463367128215980339.jpg"/>
+							</a>
+						</section>
+						<section>
+							<a href="">
+								<img src="img/trigeminy/1476156861353077338.jpg"/>
+							</a>
+						</section>
+					</div>
+				</div>
+				<!---->
+				<div class="right-sidebar">
+					<div class="sale-discount">
+						<h3>限时抢购</h3>
+						<ul class="discount">
+							<li class="goods">
+								<p id="countDownBox1" class="count-down-box">
+									<span class="count-down">00</span>天
+									<span class="count-down">00</span>小时
+									<span class="count-down">00</span>分
+									<span class="count-down">00</span>秒
+								</p>
+								<a href="">
+									<img src="img/right-side/_thumb_P_1471177731997.jpg"/>
+								</a>
+								<p class="goods-info">
+									<a href="">澳洲BLINGKISS玫瑰果油美白亮肤抚纹修复 紧致弹性 5...</a>
+								</p>
+								<p>
+									<span class="price">￥99.00</span>
+									<span class="rebate">5.5折</span>
+								</p>
+							</li>
+							<li class="goods">
+								<p id="countDownBox2" class="count-down-box">
+									<span class="count-down">00</span>天
+									<span class="count-down">00</span>小时
+									<span class="count-down">00</span>分
+									<span class="count-down">00</span>秒
+								</p>
+								<a href="">
+									<img src="img/right-side/25330_thumb_G_1478511914768.jpg"/>
+								</a>
+								<p class="goods-info">
+									<a href="">韩国妃尔妆velvizo海洋滋润强效补水面膜肌肤29g*6/...</a>
+								</p>
+								<p>
+									<span class="price">￥149.00</span>
+									<span class="rebate">10.0折</span>
+								</p>
+							</li>
+							<li class="goods">
+								<p id="countDownBox3" class="count-down-box">
+									<span class="count-down">00</span>天
+									<span class="count-down">00</span>小时
+									<span class="count-down">00</span>分
+									<span class="count-down">00</span>秒
+								</p>
+								<a href="">
+									<img src="img/right-side/25470_thumb_G_1477468837694.jpg"/>
+								</a>
+								<p class="goods-info">
+									<a href="">澳洲BLINGKISS玫瑰果油美白亮肤抚纹修复 紧致弹性 5...</a>
+								</p>
+								<p>
+									<span class="price">￥99.00</span>
+									<span class="rebate">5.5折</span>
+								</p>
+							</li>
+							<li class="goods">
+								<p id="countDownBox4" class="count-down-box">
+									<span class="count-down">00</span>天
+									<span class="count-down">00</span>小时
+									<span class="count-down">00</span>分
+									<span class="count-down">00</span>秒
+								</p>
+								<a href="">
+									<img src="img/right-side/25395_thumb_G_1477041810832.jpg"/>
+								</a>
+								<p class="goods-info">
+									<a href="">澳洲BLINGKISS玫瑰果油美白亮肤抚纹修复 紧致弹性 5...</a>
+								</p>
+								<p>
+									<span class="price">￥99.00</span>
+									<span class="rebate">5.5折</span>
+								</p>
+							</li>
+							<li class="goods">
+								<p id="countDownBox5" class="count-down-box">
+									<span class="count-down">00</span>天
+									<span class="count-down">00</span>小时
+									<span class="count-down">00</span>分
+									<span class="count-down">00</span>秒
+								</p>
+								<a href="">
+									<img src="img/right-side/22717_thumb_G_1473212375795.jpg"/>
+								</a>
+								<p class="goods-info">
+									<a href="">澳洲BLINGKISS玫瑰果油美白亮肤抚纹修复 紧致弹性 5...</a>
+								</p>
+								<p>
+									<span class="price">￥99.00</span>
+									<span class="rebate">5.5折</span>
+								</p>
+							</li>
+						</ul>
+						<div class="arrow pre"><i class="fa fa-angle-left"></i></div>
+						<div class="arrow next"><i class="fa fa-angle-right"></i></div>
+					</div>
+					<div class="proclamation">
+						<ul class="tabs">
+							<li class="tabs-selected">商城公告</li>
+							<li>招商入驻</li>
+						</ul>
+						<!--<div class="tabs-panel">-->
+							<ul class="mall-news">
+								<li>
+									<a href="">西汉张骞拼命换来的宝贝就在荥阳！！ </a>
+								</li>
+								<li>
+									<a href="">今年月饼节只需19.8元！  </a>
+								</li>
+								<li>
+									<a href="">巨型一号保你和奥运美眉一样水嫩！</a>
+								</li>
+								<li>
+									<a href="">奥运会开幕这件事比拿金牌更重要！ </a>
+								</li>
+								<li>
+									<a href="">￥29.00包邮韩国自然乐园芦荟胶 </a>
+								</li>
+							</ul>
+							<div class="tabs-panel">
+								<a href="" class="store-join-btn" title="申请商家入驻；已提交申请，可查看当前审核状态。"></a>
+								<a href="" class="store-join-help"><i class="fa fa-cog"></i>登录商家管理中心</a>
+							</div>
+						<!--</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--**************-->
+		<div class="ad-groups w1210">
+			<ul>
+				<li>
+					<a href="">
+						<img src="img/ad-groups/1473470102416850267.jpg"/>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/ad-groups/1476944435185611076.jpg"/>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/ad-groups/1477119642996745749.jpg"/>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/ad-groups/1478162529091774460.jpg"/>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/ad-groups/1477984762548458427.jpg"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--****************-->
+		<div class="w1210 store-wall">
+			<a href="" class="store-wall-title">店铺街
+				<span>推荐店铺</span>
+			</a>
+			<div class="store-wall-content">
+				<div class="store-wall-ad">
+					<a href=""></a>
+				</div>
+				<table class="store-con">
+					<tr>
+						<td><a href=""><img src="img/store-wall/logo_supplier694.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier299.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier601.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier738.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier554.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier481.jpg" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="img/store-wall/logo_supplier34.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier712.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier791.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier721.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier762.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier602.jpg" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="img/store-wall/logo_supplier369.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier794.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier450.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier698.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier804.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier558.jpg" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="img/store-wall/logo_supplier49.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier443.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier283.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier676.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier678.jpg" alt="" /></a></td>
+						<td><a href=""><img src="img/store-wall/logo_supplier826.jpg" alt="" /></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!--****************-->
+		<div class="w1210 index-sale">
+			<ul class="tabs-option">
+				<li class="tabs-current">
+					<h3>疯狂抢购</h3>
+					<i class="fa fa-caret-up"></i>
+				</li>
+				<li class="">
+					<h3>热销排行</h3>
+					<i class=""></i>
+				</li>
+				<li class="">
+					<h3>商城热卖</h3>
+					<i class=""></i>
+				</li>
+				<li class="">
+					<h3>商城推荐</h3>
+					<i class=""></i>
+				</li>
+				<li class="">
+					<h3>新品上市</h3>
+					<i class=""></i>
+				</li>
+			</ul>
+			<!--*-*-*-*-*-*-*-*-*-*--->			
+<!--111111--><ul class="tabs-sale-goods  current-list">
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/201604181541196535.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">沃隆 每日坚果成人款750g （25g*30袋）</a></p>
+					<p class="goods-price">商城价：<span>￥148.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/25518_thumb_G_1477896405972.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">小龙哈彼四季版儿童车 全蓬可躺可坐超大坐宽 399Q童车方便...</a></p>
+					<p class="goods-price">商城价：<span>￥229.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/_thumb_P_1471177731997.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">澳洲BLINGKISS玫瑰果油美白亮肤抚纹修复 紧致弹性 5...</a></p>
+					<p class="goods-price">商城价：<span>￥99.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">爸爸的选择纸尿裤极薄款 超薄干爽 婴儿纸尿裤 尿不湿</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24801_thumb_G_1476859066911.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥109.00</span></p>
+				</li>
+			</ul>
+			
+<!--**222*--><ul class="tabs-sale-goods">
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/20392_thumb_G_1463984057633.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">佳家念红枣新疆优质灰枣 三星添福 枣子960克</a></p>
+					<p class="goods-price">商城价：<span>19.90</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24536_thumb_G_1471256575568.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">日本卡乐比麦片最新版800g最佳赏味期到17.4月 包邮</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/201508201258521603_720.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">百年老汤 百瑞福 汤老鸭 老汤鸭翅 好吃的鸭肉类零食品 20...</a></p>
+					<p class="goods-price">商城价：<span>1.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24972_thumb_G_1478307734226.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">淘嘟嘟实地考察正宗河阴软籽超甜红石榴 现摘现发6个/箱热卖中</a></p>
+					<p class="goods-price">商城价：<span>58.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+			</ul>
+			
+<!--**33*--><ul class="tabs-sale-goods">
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24682_thumb_G_1471400029173.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">富乐顿2009年份巴罗莎谷珍藏级西拉子干红葡萄酒</a></p>
+					<p class="goods-price">商城价：<span>￥1398.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/_thumb_P_1471177731997.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">澳洲BLINGKISS玫瑰果油美白亮肤抚纹修复 紧致弹性 5...</a></p>
+					<p class="goods-price">商城价：<span>￥99.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+			</ul>
+			
+<!--44444--><ul class="tabs-sale-goods">
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/201604181541196535.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">沃隆 每日坚果成人款750g （25g*30袋）</a></p>
+					<p class="goods-price">商城价：<span>￥148.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/_thumb_P_1471177731997.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">澳洲BLINGKISS玫瑰果油美白亮肤抚纹修复 紧致弹性 5...</a></p>
+					<p class="goods-price">商城价：<span>￥99.00</span></p>
+				</li>
+			</ul>
+			
+<!--555555--><ul class="tabs-sale-goods">
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/201604181541196535.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">沃隆 每日坚果成人款750g （25g*30袋）</a></p>
+					<p class="goods-price">商城价：<span>￥148.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/_thumb_P_1471177731997.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">澳洲BLINGKISS玫瑰果油美白亮肤抚纹修复 紧致弹性 5...</a></p>
+					<p class="goods-price">商城价：<span>￥99.00</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/tabs-sale-goods/24862_thumb_G_1472803302481.jpg"/>
+					</a>
+					<p class="goods-name"><a href="">意大利面 俄罗斯进口通心粉两头尖型空心速食面意粉 400g</a></p>
+					<p class="goods-price">商城价：<span>￥8.50</span></p>
+				</li>
+			</ul>
+			<!--*****-->
+		</div>
+		<div class="w1210 floor">
+			<div class="floor-layout">
+				<a href="" class="banner-ad">
+					<img src="img/floor/1463824952379974145.jpg"/>
+				</a>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="footer-service">
+				<div class="w1210">
+					<ul class="list-service">
+						<li>
+							<a href="">
+								<i></i>
+								<b>快速配送</b>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i></i>
+								<b>24小时发货</b>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i></i>
+								<b>7天退货</b>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i></i>
+								<b>100%正品</b>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i></i>
+								<b>企业店铺入驻</b>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-related">
+				<div class="footer-article w1210">
+					<dl>
+						<dt>关于我们</dt>
+						<dd><a href=" ">关于淘嘟嘟</a></dd>
+						<dd><a href=" ">淘嘟嘟招聘</a></dd>
+						<dd><a href=" ">联系我们</a></dd>
+					</dl>
+					<dl>
+						<dt>新手指南</dt>
+						<dd><a href=" ">会员注册</a></dd>
+						<dd><a href=" ">购物流程</a></dd>
+						<dd><a href=" ">买家拍卖指南</a></dd>
+					</dl>
+					<dl>
+						<dt>支付/配送</dt>
+						<dd><a href=" ">商品验货与签收</a></dd>
+						<dd><a href=" ">配送时间与范围</a></dd>
+						<dd><a href=" ">支付常见问题</a></dd>
+						<dd><a href=" ">网上支付</a></dd>
+					</dl>
+					<dl>
+						<dt>平台规则</dt>
+						<dd><a href=" ">退换货规则</a></dd>
+						<dd><a href=" ">淘嘟嘟总则</a></dd>
+					</dl>
+					<dl>
+						<dt>帮助信息</dt>
+						<dd><a href=" ">优惠规则</a></dd>
+						<dd><a href=" ">常见问题</a></dd>
+						<dd><a href=" ">找回密码</a></dd>
+					</dl>
+					<dl>
+						<dt>服务支持</dt>
+						<dd><span>客服电话 0371-00000000</span></dd>
+						<dd><span>客服 QQ 0000000000</span></dd>
+						<dd><span>工作时间 8：30-18：00</span></dd>
+					</dl>
+				</div>
+				<div class="footer-info">
+					<div class="links">
+						<a href=""><img src="img/floor/01.jpg"/></a>
+						<a href=""><img src="img/floor/02.jpg"/></a>
+						<a href=""><img src="img/floor/03.jpg"/></a>
+						<a href=""><img src="img/floor/04.jpg"/></a>
+						<a href=""><img src="img/floor/05.jpg"/></a>
+					</div>
+					<div class="info-text">
+						<p>
+							<a href="">商家入驻</a>|
+							<a href="">站内地图</a>|
+							<a href="">帮助中心</a>
+							ICP备案证书号:
+							<a href="">豫B2-00000000-0</a>
+						</p>
+						<p class="info-bottom">
+							<a href="">© 2005-2016 淘嘟嘟 版权所有，并保留所有权利。</a>
+							<a href="">河南省电子商务产业园</a>
+							<a href="">Tel: 4000000000</a>
+							<a href="">E-mail: 00000000@000.com</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<aside class="right-side-menu">
+			<div class="quick-links">
+				<ul>
+					<li class="quick-login">
+						<a href=""><i class="fa fa-user-o"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="quick-toggle"></div>
+		</aside>
+		<!--占位-->
+		<div id="placeholder"></div>
+	</body>
+	<script src="libs/jquery.min.js"></script>
+
+	<script src="js/index.js"></script>
+	<script src="js/carousel.js"></script>
+</html>
