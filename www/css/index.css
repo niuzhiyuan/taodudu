@@ -229,7 +229,10 @@ ul li{
 	height: 30px;
 	background-color: white;
 	border: none;
+	-webkit-border: none;
+	outline: none;
 	padding-left: 5px;
+	color: #666666;
 }
 #search-btn{
 	width: 90px;
@@ -338,7 +341,6 @@ ul li{
 	position: relative;
 }
 .all-cate{
-
 	background-color: #F7EBF0;
 	width: 210px;
 	height: 100%;
@@ -351,15 +353,112 @@ ul li{
 	height: calc(100%/13);
 
 }
-.all-cate li:hover{
+.all-cate>li:hover{
 	background-color: white;
+	
 }
+.all-cate>li:hover .categorys{
+	display: block;
+}
+/*****分类******/
+.categorys{
+	display: none;
+	width: 1000px;
+	height: 507px;
+	position: absolute;
+	left: 210px;
+	top: 0;
+	background-color: white;
+	z-index: 200;
+}
+.item-left{
+	width: 790px;
+	height: 463px;
+	padding: 20px 0 0 20px;
+}
+.item-left h4{
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	width: 88px;
+	height: 24px;
+}
+.item-left h4 a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-color: #E31939;
+}
+.item-left h4 a:hover span:first-child{
+	background-color: #F43E83;
+}
+.item-left h4 a:hover span:last-child{
+	background-color: #E31939;
+}
+.item-left h4 a span{
+	display: inline-block;
+	font-size: 12px;
+	color: white;
+	font-weight: normal;
+	text-align: center;
+	line-height: 24px;
+}
+.item-left h4 a span:first-child{
+	background-color: #7c7171;
+	width: 64px;
+	height: 24px;
+	float: left;
+	
+}
+.item-left h4 a span:last-child{
+	width: 24px;
+	height: 24px;
+	background-color: #5c5251;
+}
+.item-left h4 a span:last-child i{
+	
+}
+/**/
+.subitems{
+	width: 770px;
+	height: 414px;
+}
+.fore1{
+	height: 38px;
+}
+.fore1 a{
+	color: #666666!important;
+	line-height: 38px;
+	font-size: 12px!important;
+}
+.fore1 a:hover{
+	color: #E31939!important;
+}
+.fore1 a i{
+	margin-left: 10px;
+}
+.fore1 dt{
+	float: left;
+	width: 84px;
+	height: 32px;
+	text-align: right;
+	font-weight: 600;
+	padding-right: 10px;
+}
+.fore1 dd{
+	margin-left: 84px;
+}
+.fore1 dd a{
+	border-left: 1px solid #e0e0e0;
+	padding: 0 7px 0 10px;
+	font-size: 12px!important;
+}
+/*---------*/
 .all-cate li a{
 	color: #333333;
 	text-decoration: none;
 	font-size: 14px;
 }
-.all-cate li i{
+.all-cate>li>i{
 	float: right;
 	color: #9D9DAB;
 	padding-top: 4px;
@@ -907,14 +1006,241 @@ ul li{
 	padding: 0 3px;
 }
 
-/*----right-side-menu---------*/
-.right-side-menu{
-	width: 36px;
+/*----right-side-bar---------*/
+.right-side-bar{
+	/*width: 36px;*/
 	height: 100%;
-	background-color: rgba(0,0,0,0.8);
+	background-color: #4B4B4B;
 	position: fixed;
 	right: 0;
 	top: 0;
+}
+.right-side-menu{
+	width: 36px;
+	height: 100%;
+	position: relative;
+}
+.right-side-menu>ul{
+	width: 36px;
+	height: 384px;
+	position: absolute;
+	top: 10%;
+	left: 0;
+	text-align: center;
+	background-color: #4B4B4B;
+	z-index: 50;
+}
+.quick-login{
+	width: 100%;
+	height: 38px;
+	position: relative;
+}
+.quick-login:hover{
+	background-color: #F43E83;
+}
+.quick-login:hover .sidebar-user{
+	display: block;
+}
+.quick-login a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.user-head{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/common-icon.png);
+	background-position: -321px 6px;
+}
+/*用户头像*/
+.sidebar-user{
+	display: none;
+	width: 247px;
+	height: 132px;
+	position: absolute;
+	top: 0;
+	left: -247px;
+	background-color: white;
+	padding: 15px 10px;
+	box-shadow: 0 0 5px rgba(0,0,0,.4);
+	border-radius: 5px 0 0 5px;
+	border: 1px solid #ddd\0;
+	border-right: 0;
+	z-index: 999999;
+}
+.sidebar-user>i{
+	position: absolute;
+	top: 14px;
+	right: -5px;
+	color: white;
+}
+.user-pic{
+	width: 74px;
+	height: 74px;
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.user-pic img{
+	width: 74px;
+	height: 74px;	
+}
+.sidebar-user-info p{
+	margin: 0;
+	font-size: 12px;
+	color: #666666;
+}
+.sidebar-user-info p a{
+	display: inline;
+	color: #E31939;
+	margin: 0 12px;
+	text-decoration: none;
+}
+
+.side-bar-tabs{
+	height: 38px;
+	position: relative;
+	margin-top: 8px;
+	
+}
+.side-bar-tabs:hover .popup{
+	width: 92px;
+	left: -92px;
+}
+.side-bar-tabs a{
+	display: inline-block;
+	width: 100%;
+	height: 38px;
+}
+.side-bar-tabs i{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+
+.mpbtn-bonus{
+	background-color: #F43E83;
+}
+.bonus{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/common-icon.png);
+	background-position: -362px -117px;
+	margin-top: 4px;
+}
+.side-bar-tabs .popup{
+	width: 0px;
+	height: 38px;
+	overflow: hidden;
+	background-color: #4B4B4B;
+	/*background-color: #F43E83;*/
+	color: white;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	transition: all 0.5s;
+}
+.popup b{
+	display: inline-block;
+	width: 90%;
+	height: 17px;
+	font-weight: normal;
+	font-size: 12px;
+	margin-top: 10px;	
+	word-break: keep-all;
+	overflow: hidden;
+}
+.shopping-cart{
+	width: 36px;
+	height: 130px;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+.shopping-cart:hover{
+	background-color: #F43E83;
+}
+.shopping-cart:hover .cart-num{
+	background-color: white;
+	color: #F43E83;
+}
+#collectBox{
+	width: 36px;
+	height: 130px;
+	padding-top: 7px;
+}
+.cart-icon{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/common-icon.png);
+	background-position: -322px -25px;
+}
+.span{
+	display: inline-block;
+	width: 16px;
+	height: 48px;	
+	color: white;
+}
+.cart-num{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #F43E83;
+	color: white;
+	border-radius: 50%;
+	line-height: 20px;
+	margin-top: 5px;
+}
+
+.history{
+	background: url(../img/zuji.png) no-repeat 3px 6px;
+}
+.side-bar-tabs:hover{
+	background-color: #F43E83;
+}
+.stores{
+	background: url(../img/common-icon.png) no-repeat;
+	background-position: -321px -54px;
+}
+.collect{
+	background: url(../img/common-icon.png) no-repeat;
+	background-position: -321px -86px;
+}
+/*-----*/
+.quick-toggle{
+	width: 36px;
+	height: 184px;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+}
+
+.quick-area>a>i{
+	background-image: url(../img/common-icon.png);
+}
+.customer-service{
+	background-position: -277px -180px;
+}
+.customer-contact{
+	background-position: -359px -172px;
+}
+.qr-code{
+	background-position: -355px -23px;
+}
+
+.return-top:hover{
+	background-color: #F43E83;
+}
+
+.top{
+	background-image: url(../img/top.png);
+	background-repeat: no-repeat;
+	background-position: 7px 9px;
 }
 /**-*-*-*-*-*-*-*-*-*-**/
 #placeholder{

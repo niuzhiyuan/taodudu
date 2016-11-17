@@ -20,15 +20,26 @@ for(var i=0;i<snFold.length;i++){
 	
 }
 //---------------------
+$("#keyword").focus(function(){
+	if($("#keyword").val()=="请输入关键字"){
+		$("#keyword").val("");
+		$("#keyword").css("box-shadow","none")
+	}
+})
+$("#keyword").blur(function(){
+	if($("#keyword").val()==""){
+		$("#keyword").val("请输入关键字")
+	}
+})
 //-----------限时抢购------
 //倒计时
+var now,endDate,leftTime,leftsecond,day1,hour,minute,second;
 function ShowCountDown(year,month,day,selector) {
-	var now,endDate,leftTime,leftsecond,day1,hour,minute,second
 	setInterval(function(){
 		now = new Date(); 
 		endDate = new Date(year, month-1, day); 
 		leftTime=endDate.getTime()-now.getTime(); 
-		leftsecond = parseInt(leftTime/1000); 
+		leftsecond = parseInt(leftTime/1000);
 		//day1=parseInt(leftsecond/(24*60*60*6)); 
 		day1=Math.floor(leftsecond/(60*60*24)); 
 		hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
@@ -59,7 +70,6 @@ $(".pre").click(function(){
 	var translateX = $(".discount").css("transform").split(",")[4]*1
 	translateX = translateX>-210?-210:translateX;
 	$(".discount").css("transform","translateX("+(translateX+210)+"px)")
-
 })
 
 
@@ -98,6 +108,6 @@ $(".tabs-option li").mouseenter(function(e){
 
 	$(".tabs-sale-goods").removeClass("current-list")
 	$(".tabs-sale-goods").eq($(this).index()).addClass("current-list")
-})
+});
 
 
