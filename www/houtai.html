@@ -3,26 +3,104 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style>
+			#dianpu{
+				width:500px;
+				height: 200px;
+				border: 1px solid black;
+			}
+			#dian{
+				width: 800px;
+				height: 250px;
+				border: 1px solid black;
+			}
+		</style>
 	</head>
 	<body>
-		<form action="/guanli" method="post">
-			<label>编号</label>
-			<select name="identifier">
-				<option value="疯狂抢购1" selected="selected">疯狂抢购1</option>
-				<option value="疯狂抢购2" >疯狂抢购2</option>
-				<option value="疯狂抢购3" >疯狂抢购3</option>
-				<option value="疯狂抢购4" >疯狂抢购4</option>
-				<option value="疯狂抢购5" >疯狂抢购5</option>
-			</select>
-			<label>图片路径</label>
-			<input type="text" name="imgsrc" id="" value="" /><br />
-			<label>描述</label>
-			<textarea name="desc" rows="10" cols="50"></textarea><br />
-			<label>价格</label>
-			<input type="text" name="price" id="" value="" /><br />
-			<input type="submit" value="ttttttt"/>
-		</form>
+		<div id="dianpu">
+			<form action="" method="post" id="street-form">
+				<label for="dianpujie">店铺街</label><br />
+				<input type="number" name="identifier" id="dianpujie" max="24" value=""/><br />
+				<label for="imgsrc">图片名</label><br />
+				<input type="text" name="imgsrc" id="imgsrc" value="" />
+				<input type="submit" value="修改"/>
+			</form>			
+		</div>
+		<div id="dian">
+			<form action="/guanli" method="post" id="form">
+				<label>修改物品</label>
+				<select name="identifier">
+					<optgroup label="疯狂抢购">
+						<option value="疯狂抢购1" selected="selected">疯狂抢购1</option>
+						<option value="疯狂抢购2" >疯狂抢购2</option>
+						<option value="疯狂抢购3" >疯狂抢购3</option>
+						<option value="疯狂抢购4" >疯狂抢购4</option>
+						<option value="疯狂抢购5" >疯狂抢购5</option>
+					</optgroup>
+					<optgroup label="热销排行">
+						<option value="热销排行1" >热销排行1</option>
+						<option value="热销排行2" >热销排行2</option>
+						<option value="热销排行3" >热销排行3</option>
+						<option value="热销排行4" >热销排行4</option>
+						<option value="热销排行5" >热销排行5</option>
+					</optgroup>
+					<optgroup label="商城热卖">
+						<option value="商城热卖1" >商城热卖1</option>
+						<option value="商城热卖2" >商城热卖2</option>
+						<option value="商城热卖3" >商城热卖3</option>
+						<option value="商城热卖4" >商城热卖4</option>
+						<option value="商城热卖5" >商城热卖5</option>
+					</optgroup>
+					<optgroup label="商城推荐">
+						<option value="商城推荐1" >商城推荐1</option>
+						<option value="商城推荐2" >商城推荐2</option>
+						<option value="商城推荐3" >商城推荐3</option>
+						<option value="商城推荐4" >商城推荐4</option>
+						<option value="商城推荐5" >商城推荐5</option>
+					</optgroup>
+					<optgroup label="新品上市">
+						<option value="新品上市1" >新品上市1</option>
+						<option value="新品上市2" >新品上市2</option>
+						<option value="新品上市3" >新品上市3</option>
+						<option value="新品上市4" >新品上市4</option>
+						<option value="新品上市5" >新品上市5</option>
+					</optgroup>
+						
+				</select>
+				<label>图片路径</label>
+				<input type="text" name="imgsrc" id="" value="" /><br />
+				<label>描述</label>
+				<textarea name="desc" rows="7" cols="50"></textarea><br />
+				<label>价格</label>
+				<input type="text" name="price" id="" value="" /><br />
+				<input type="submit" value="修改"/>
+			</form>
+		</div>
+			
 	</body>
+	<script src="libs/jquery.min.js"></script>
+	<script>
+		$("#form").submit(function(e){
+			e.preventDefault();
+			var data = $("#form").serialize();
+			console.log(data)
+			$.post("/guanli",data,function(resData){
+				if(resData.err == 0){
+					alert(resData.msg);
+				}
+			});
+		})
+		$("#street-form").submit(function(e){
+			e.preventDefault();
+			var data = $("#street-form").serialize();
+			console.log(data)
+			$.post("/guanli",data,function(resData){
+				if(resData.err == 0){
+					alert(resData.msg);
+				}
+			});
+		})
+	</script>
 </html>
 			<!--identifier:req.body.identifier,
 				img:req.body.imgsrc,

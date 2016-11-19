@@ -1,4 +1,6 @@
 
+
+
 //顶部nav
 var snFold = document.getElementsByClassName("sn-fold");
 for(var i=0;i<snFold.length;i++){
@@ -90,25 +92,32 @@ $(".tabs").children().mouseenter(function(e){
 
 
 
-//图片晃动动画
-$(".store-con img").mouseenter(function(e){
-	$(e.target).addClass("animated flipInX")
-	setTimeout(function(){
-		$(e.target).removeClass("animated flipInX")
-	},1000)
-})
 
+
+
+setTimeout(function(){	
+	//图片晃动动画
+	$(".store-con img").mouseenter(function(e){
+		$(e.target).addClass("animated flipInX")
+		setTimeout(function(){
+			$(e.target).removeClass("animated flipInX")
+		},1000)
+	})
 
 // index-sale
-$(".tabs-option li").mouseenter(function(e){
-	$(".tabs-option li").removeClass("tabs-current");
-	$(".tabs-option li i").removeClass("fa fa-caret-up");
-	$(this).addClass("tabs-current");
-	$(this).children("i").addClass("fa fa-caret-up");
+	console.log($("#index-sale").children());
+		$(".tabs-option li").mouseenter(function(e){
+		$(".tabs-option li").removeClass("tabs-current");
+		$(".tabs-option li i").removeClass("fa fa-caret-up");
+		$(this).addClass("tabs-current");
+		$(this).children("i").addClass("fa fa-caret-up");
+	
+		$(".tabs-sale-goods").removeClass("current-list")
+		$(".tabs-sale-goods").eq($(this).index()).addClass("current-list")
+	});
+},100)
 
-	$(".tabs-sale-goods").removeClass("current-list")
-	$(".tabs-sale-goods").eq($(this).index()).addClass("current-list")
-});
+
 
 
 //

@@ -115,14 +115,14 @@ function isLogin(req,res,next){
 }
 
 
-app.post("/user/all",isLogin,function(req,res){
-	
-	User.find({token:{$ne:req.cookies.token}},{"account":1})
-	.exec(function(err,data){
-		res.json({err:0,data:data})
-	});
-	
-});
+//app.post("/user/all",isLogin,function(req,res){
+//	
+//	User.find({token:{$ne:req.cookies.token}},{"account":1})
+//	.exec(function(err,data){
+//		res.json({err:0,data:data})
+//	});
+//	
+//});
 
 
 
@@ -139,54 +139,96 @@ var Goods = mongoose.model("sale",goodsData);
 
 
 app.post("/guanli",function(req,res){
-
+	
 	console.log(req.body);
-	Goods.find({identifier:req.body.identifier})
-	.count()
-	.exec(function(err,data){
-		if(data>0){
-			Goods.update({identifier:req.body.identifier},{
-				img:req.body.imgsrc,
-				desc:req.body.desc,
-				price:req.body.price
-			})
-			.exec(function(err){
-				res.json({err:0,msg:"修改成功"});
-			})
+	
+	if(typeof req.body.identifier == "number"){
+		Goods.find({identifier:req.body.identifier})
+		.count()
+		.exec(function(err,data){
+			if(data>0){
+				Goods.update({identifier:req.body.identifier},{
+					img:req.body.imgsrc,
+					
+				})
+				.exec(function(err){
+					if(!err){
+						res.json({err:0,msg:"修改成功"});
+					}
+					
+				})
+			}else{
+				var p = new Goods({
+					identifier:req.body.identifier,
+					img:req.body.imgsrc,					
+				});
+				
+				p.save(function(err){
+					if(err){
+						res.json({err:2,msg:"服务器存储失败"});
+					}else{
+						res.json({err:0,msg:"添加成功"});
+					}
+				})
+			}
+		})
+		
+	}else{
+		Goods.find({identifier:req.body.identifier})
+		.count()
+		.exec(function(err,data){
+			if(data>0){
+				Goods.update({identifier:req.body.identifier},{
+					img:req.body.imgsrc,
+					desc:req.body.desc,
+					price:req.body.price
+				})
+				.exec(function(err){
+					if(!err){
+						res.json({err:0,msg:"修改成功"});
+					}
+					
+				})
+				
+			}else{
+				var g = new Goods({
+					identifier:req.body.identifier,
+					img:req.body.imgsrc,
+					desc:req.body.desc,
+					price:req.body.price
+				});
+				
+				g.save(function(err){
+					if(err){
+						res.json({err:2,msg:"服务器存储失败"});
+					}else{
+						res.json({err:0,msg:"添加成功"});
+					}
+				})
+			}
+		})
+	}
 			
-		}else{
-			var g = new Goods({
-				identifier:req.body.identifier,
-				img:req.body.imgsrc,
-				desc:req.body.desc,
-				price:req.body.price
-			});
-			
-			g.save(function(err){
-				if(err){
-					res.json({err:2,msg:"服务器修改失败"});
-				}else{
-					res.json({err:0,msg:"修改成功"});
-				}
-			})
-		}
-	})	
 	
 })
 
-var data = ["疯狂抢购1","疯狂抢购2","疯狂抢购3","疯狂抢购4","疯狂抢购5",
-"热销排行1","热销排行2","热销排行3","热销排行4","热销排行5"]
+//var data = ["疯狂抢购1","疯狂抢购2","疯狂抢购3","疯狂抢购4","疯狂抢购5",
+//			"热销排行1","热销排行2","热销排行3","热销排行4","热销排行5",
+//			"商城热卖1","商城热卖2","商城热卖3","商城热卖4","商城热卖5",
+//			"商城推荐1","商城推荐2","商城推荐3","商城推荐4","商城推荐5",
+//			"新品上市1","新品上市2","新品上市3","新品上市4","新品上市5"]
 
 app.post("/goods-data",function(req,res){
 	
-	var result = []
+	//var result = []
 		Goods.find()
 		.exec(function(err,data){
-			console.log(data);
-			data.map(function(obj){
-				result.push(obj);				
-			})
-			res.json({err:0,data:result});
+			//console.log(data);
+//			data.map(function(obj){
+//				
+//				//result.push(obj);				
+//			})
+			res.json({err:0,data:data});
 		})
 		
 		
