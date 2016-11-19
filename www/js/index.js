@@ -111,3 +111,46 @@ $(".tabs-option li").mouseenter(function(e){
 });
 
 
+//
+$("#pop-close").click(function(){
+	$(".pop-mask").hide()
+})
+$(".quick-login").click(function(e){
+	$(".pop-mask").show()
+	e.preventDefault();
+	e.stopImmediatePropagation()
+})
+ $(".sidebar-login-a").click(function(e){
+ 	e.preventDefault();
+   	e.stopImmediatePropagation();
+ 	$(".pop-con").css("transform","translateX(0px)");
+ 	$(".pop-mask").show()
+ })
+ $(".sidebar-regist-a").click(function(e){
+ 	e.stopImmediatePropagation();
+ 	e.preventDefault();
+ 	$(".pop-con").css("transform","translateX(-418px)");
+ 	$(".pop-mask").show()
+ })
+
+$("#sn-login").click(function(e){
+ 	e.preventDefault();
+ 	$(".pop-con").css("transform","translateX(0px)");
+ 	$(".pop-mask").show();
+})
+$("#register").click(function(e){
+ 	e.preventDefault();
+	//e.stopImmediatePropagation();
+ 	$(".pop-con").css("transform","translateX(-418px)");
+ 	$(".pop-mask").show()
+})
+
+//登录注册的转换
+$(".right-regist").click(function(e){
+	e.preventDefault();
+	$(".pop-con").css("transform","translateX(-418px)");
+})
+$(".right-login").click(function(e){
+	e.preventDefault();
+	$(".pop-con").css("transform","translateX(0px)");
+})

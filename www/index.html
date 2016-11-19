@@ -6,13 +6,14 @@
 		<link rel="stylesheet" href="libs/font-icon/css/font-icon.min.css"/>
 		<link rel="stylesheet" href="libs/animate.min.css"/>
 		<link rel="stylesheet" href="css/index.css"/>
+		<link rel="stylesheet" href="css/login-and-regist.css"/>
 	</head>
 	<body>
 		<nav id="site-nav">
 			<div class="sn-container">
 				<span>欢迎光临淘嘟嘟!</span>
-				<span><a href="" id="sn-login">请登录</a></span>
-				<span><a href="" id="register">免费注册</a></span>
+				<span id="login-account"><a href="" id="sn-login">请登录</a></span>
+				<span id="regist-logout"><a href="" id="register">免费注册</a></span>
 				<ul class="sn-quick-menu">
 					<li class="sn-myInfo sn-fold">
 						<a href="">我的信息</a>
@@ -1355,7 +1356,7 @@
 			<div class="right-side-menu">
 				<ul>
 					<li class="quick-login">
-						<a href=""><i class="user-head"></i></a>
+						<a><i class="user-head"></i></a>
 						<div class="sidebar-user">
 							<i class="fa fa-caret-right"></i>
 							<div class="sidebar-user-info">
@@ -1363,7 +1364,7 @@
 									<img src="img/people.gif"/>
 								</div>
 								<p>
-									你好!请<a href="">登录</a>|<a href="">注册</a>
+									你好!请<a href="" class="sidebar-login-a">登录</a>|<a href="" class="sidebar-regist-a">注册</a>
 								</p>
 							</div>
 						</div>
@@ -1422,8 +1423,90 @@
 		</aside>
 		<!--占位-->
 		<div id="placeholder"></div>
+		<!--登录注册-->
+		<div class="pop-mask">
+			<div class="pop-login">
+				<div class="pop-header">
+					<span>您尚未登录</span>
+					<i id="pop-close" class="fa fa-close"></i>
+				</div>
+				<div class="pop-con">
+					<form id="login" action="" method="post">
+						<div class="form">
+							<div class="mt">
+								<h2>用户登录</h2>
+								<a href="" class="right-regist">
+									<span>立即注册</span>
+									<i class="fa fa-angle-right"></i>
+								</a>
+							</div>
+							<div class="mc">
+								<div>
+									<i class="mc-head-icon"></i>
+									<input type="text" name="account" id="user-name" required placeholder="手机号/用户名/邮箱" autocomplete="off"/>
+								</div>
+								<div>
+									<i class="mc-psw-icon"></i>
+									<input type="password" name="psw" id="psw" required placeholder="密码" />
+								</div>
+							</div>
+							<div class="safety">
+								<input type="checkbox" name="remember" id="remember" value="1" />
+								<label for="remember">请保存我这次的登录信息</label>
+								<a href="" class="forget-psw">忘记密码?</a>
+							</div>
+							<div class="loginregist-btn">
+								<input type="submit" id="login-submit" name="submit" value="立即登录"/>
+							</div>
+							<div class="item-coagent">
+								<a href=""><i class="weixin"></i>微信登录</a>
+								<a href=""><i class="qq"></i>QQ登录</a>
+								<a href=""><i class="weibo"></i>微博登录</a>
+							</div>
+						</div>
+					</form>
+					<form id="form-regist" action="" method="post">
+						<div class="regist-form">
+							<div class="mt">
+								<h2>用户注册</h2>
+								<a href="" class="right-login">
+									<span>已有账号?</span>
+									登录
+								</a>
+							</div>
+							<div class="mc">
+								<div>
+									<i class="mc-head-icon"></i>
+									<input type="text" name="account" id="account" required placeholder="手机号/邮箱" autocomplete="off"/>
+								</div>
+								<div>
+									<i class="mc-psw-icon"></i>
+									<input type="password" name="password" id="password" required placeholder="密码" />
+								</div>
+								<div id="confirm-box">
+									<i class="mc-psw-icon"></i>
+									<input type="password" id="confirm" required placeholder="确认密码" />
+								</div>
+							</div>
+							<div class="agree">
+								<input type="checkbox" name="agree" id="agreement" required value="1" checked/>
+								<label>我已看过并接受《<a href="">用户协议</a>》</label>
+							</div>
+							<div class="loginregist-btn">
+								<input type="submit" id="regist-submit" name="submit" value="立即注册"/>
+							</div>
+							
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	
 	</body>
 	<script src="libs/jquery.min.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/pinjie.js"></script>
+	
+	<script src="js/login-regist.js"></script>
 	<script src="js/carousel.js"></script>
 </html>

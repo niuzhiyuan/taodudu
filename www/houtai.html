@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="/guanli" method="post">
+			<label>编号</label>
+			<select name="identifier">
+				<option value="疯狂抢购1" selected="selected">疯狂抢购1</option>
+				<option value="疯狂抢购2" >疯狂抢购2</option>
+				<option value="疯狂抢购3" >疯狂抢购3</option>
+				<option value="疯狂抢购4" >疯狂抢购4</option>
+				<option value="疯狂抢购5" >疯狂抢购5</option>
+			</select>
+			<label>图片路径</label>
+			<input type="text" name="imgsrc" id="" value="" /><br />
+			<label>描述</label>
+			<textarea name="desc" rows="10" cols="50"></textarea><br />
+			<label>价格</label>
+			<input type="text" name="price" id="" value="" /><br />
+			<input type="submit" value="ttttttt"/>
+		</form>
+	</body>
+</html>
+			<!--identifier:req.body.identifier,
+				img:req.body.imgsrc,
+				desc:req.body.desc,
+				price:req.body.price-->
