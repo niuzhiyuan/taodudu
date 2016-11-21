@@ -55,7 +55,7 @@ app.post("/user/regist",function(req,res){
 			
 			u.save(function(err){
 				if(err){
-					res.json({err:2,msg:"服务器存储失败"});
+					res.json({err:2,msg:"注册失败"});
 				}else{
 					res.json({err:0,msg:"注册成功"});
 				}

@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="css/login-and-regist.css"/>
 	</head>
 	<body>
+	<script src="libs/template.js"></script>
 		<nav id="site-nav">
 			<div class="sn-container">
 				<span>欢迎光临淘嘟嘟!</span>
@@ -89,28 +90,17 @@
 							<input type="button" name="search-btn" id="search-btn" value="搜&nbsp;索"/>
 						</form>
 					</div>
-					<ul class="hot-query">
-						<li><a href="">爱他美</a></li>
-						<li>|</li>
-						<li><a href="">牛栏</a></li>
-						<li>|</li>
-						<li><a href="">奶粉</a></li>
-						<li>|</li>
-						<li><a href="">纸尿裤</a></li>
-						<li>|</li>
-						<li><a href="">韩国</a></li>
-						<li>|</li>
-						<li><a href="">德国</a></li>
-						<li>|</li>
-						<li><a href="">食品</a></li>
-						<li>|</li>
-						<li><a href="">化妆品</a></li>
+					<ul id="hot-query">
+						<!--template-->
 					</ul>
 				</div>
-				<ul class="header-right">
-					<li><a href=""><img src="img/7day.jpg"/></a></li>
-					<li><a href=""><img src="img/guarantee.jpg"/></a></li>
-					<li><a href=""><img src="img/delivery.jpg"/></a></li>
+				<ul id="header-right">
+					<script id="headerRight" type="text/html">
+						{{each imgsrc as src index}}
+						<li><a href=""><img src="{{src}}"/></a></li>
+						{{/each}}
+					</script>
+						
 				</ul>
 			</div>
 		</div>
@@ -136,629 +126,8 @@
 		<!--*****-->
 		<div class="all-banner">				
 			<div class="main-banner w1210">
-				<ul class="all-cate">
-					<li><a href="">食品/酒水/生鲜</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>休闲食品</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>休闲食品</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>休闲食品</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">生鲜<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">水果/果蔬</a>
-											<a href="">海鲜水产</a>
-											<a href="">肉禽蛋奶</a>
-											<a href="">熟食腊味</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">母婴/玩具乐器</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">营养辅食<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">益生菌/初乳</a>
-											<a href="">米粉/菜粉/面条/粥</a>
-											<a href="">果泥/果汁</a>
-											<a href="">DHA/钙铁锌/维生素</a>
-											<a href="">宝宝零食</a>
-										</dd>
-									</dl>
-									
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">化妆个护</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>面部护肤</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>身体护理</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>洗发护发</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">面部护肤<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">清洁</a>
-											<a href="">护肤</a>
-											<a href="">面膜</a>
-											<a href="">套装</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">身体护理<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">沐浴</a>
-											<a href="">润肤</a>
-											<a href="">手足</a>
-											<a href="">纤体塑性</a>
-											<a href="">美胸</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">营养辅食<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">益生菌/初乳</a>
-											<a href="">米粉/菜粉/面条/粥</a>
-											<a href="">果泥/果汁</a>
-											<a href="">DHA/钙铁锌/维生素</a>
-											<a href="">宝宝零食</a>
-										</dd>
-									</dl>
-									
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">家居/家具/家装/厨具/家纺</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>面部护肤</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>身体护理</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>洗发护发</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									
-									<dl class="fore1">
-										<dt><a href="">身体护理<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">沐浴</a>
-											<a href="">润肤</a>
-											<a href="">手足</a>
-											<a href="">纤体塑性</a>
-											<a href="">美胸</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">营养辅食<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">益生菌/初乳</a>
-											<a href="">米粉/菜粉/面条/粥</a>
-											<a href="">果泥/果汁</a>
-											<a href="">DHA/钙铁锌/维生素</a>
-											<a href="">宝宝零食</a>
-										</dd>
-									</dl>
-									
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">手机/数码</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">营养辅食<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">益生菌/初乳</a>
-											<a href="">米粉/菜粉/面条/粥</a>
-											<a href="">果泥/果汁</a>
-											<a href="">DHA/钙铁锌/维生素</a>
-											<a href="">宝宝零食</a>
-										</dd>
-									</dl>
-									
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">鞋靴/箱包/钟表/礼品</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">男装/女装/内衣/装饰</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">营养辅食<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">益生菌/初乳</a>
-											<a href="">米粉/菜粉/面条/粥</a>
-											<a href="">果泥/果汁</a>
-											<a href="">DHA/钙铁锌/维生素</a>
-											<a href="">宝宝零食</a>
-										</dd>
-									</dl>
-									
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">家用电器</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">营养保健</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">营养辅食<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">益生菌/初乳</a>
-											<a href="">米粉/菜粉/面条/粥</a>
-											<a href="">果泥/果汁</a>
-											<a href="">DHA/钙铁锌/维生素</a>
-											<a href="">宝宝零食</a>
-										</dd>
-									</dl>
-									
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">电脑办公</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<div class="subitems">
-									
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">营养辅食<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">益生菌/初乳</a>
-											<a href="">米粉/菜粉/面条/粥</a>
-											<a href="">果泥/果汁</a>
-											<a href="">DHA/钙铁锌/维生素</a>
-											<a href="">宝宝零食</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="item-right">
-								
-							</div>
-						</div>
-					</li>
-					<li><a href="">汽车及配件装饰</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">尿裤湿巾<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">尿裤/拉拉裤</a>
-											<a href="">湿巾</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">营养辅食<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">益生菌/初乳</a>
-											<a href="">米粉/菜粉/面条/粥</a>
-											<a href="">果泥/果汁</a>
-											<a href="">DHA/钙铁锌/维生素</a>
-											<a href="">宝宝零食</a>
-										</dd>
-									</dl>
-									
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-									<dl class="fore1">
-										<dt><a href="">休闲食品<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">休闲零食</a>
-											<a href="">坚果炒货</a>
-											<a href="">肉干肉脯</a>
-											<a href="">蜜饯果干</a>
-											<a href="">糖果/巧克力</a>
-											<a href="">饼干蛋糕</a>
-										</dd>
-									</dl>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li><a href="">户外运动</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-							<div class="item-left">
-								<h4><a href=""><span>奶粉</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>营养辅食</span><span><i class="fa fa-angle-right"></i></span></a></h4>
-								<h4><a href=""><span>玩具乐器</span><span><i class="fa fa-angle-right"></i></span></a></h4>		
-								<div class="subitems">
-									<dl class="fore1">
-										<dt><a href="">奶粉<i class="fa fa-angle-right"></i></a></dt>
-										<dd>
-											<a href="">婴幼奶粉</a>
-											<a href="">成人奶粉</a>
-										</dd>
-									</dl>
-									
-								</div>
-							</div>
-							
-						</div>
-					</li>
-					<li><a href="">旅行/婚庆/线下服务</a><i class="fa fa-angle-right"></i>
-						<div class="categorys">
-									
-						</div>
-					</li>
+				<ul  id="all-cate">
+					<!--template-->
 				</ul>
 				<div id="carousel-box">
 					<!--轮播图-->
@@ -797,22 +166,16 @@
 							<span class="point"></span>
 						</div>
 					</section>
-					<div class="trigeminy">
-						<section>
-							<a href="">
-								<img src="img/trigeminy/1476156826339504997.jpg"/>
-							</a>
-						</section>
-						<section>
-							<a href="">
-								<img src="img/trigeminy/1463367128215980339.jpg"/>
-							</a>
-						</section>
-						<section>
-							<a href="">
-								<img src="img/trigeminy/1476156861353077338.jpg"/>
-							</a>
-						</section>
+					<div class="trigeminy" id="trigeminy">
+						<script id="tri" type="text/html">
+							{{each imgsrc as src index}}
+								<section>
+									<a href="">
+										<img src="{{src}}"/>
+									</a>
+								</section>
+							{{/each}}
+						</script>
 					</div>
 				</div>
 				<!---->
@@ -919,86 +282,51 @@
 							<li class="tabs-selected">商城公告</li>
 							<li>招商入驻</li>
 						</ul>
-						<!--<div class="tabs-panel">-->
-							<ul class="mall-news">
+						<ul id="mall-news">
+							<script id="mn" type="text/html">
+								{{each newstitle as n index}}
 								<li>
-									<a href="">西汉张骞拼命换来的宝贝就在荥阳！！ </a>
+									<a href="">{{n}}</a>
 								</li>
-								<li>
-									<a href="">今年月饼节只需19.8元！  </a>
-								</li>
-								<li>
-									<a href="">巨型一号保你和奥运美眉一样水嫩！</a>
-								</li>
-								<li>
-									<a href="">奥运会开幕这件事比拿金牌更重要！ </a>
-								</li>
-								<li>
-									<a href="">￥29.00包邮韩国自然乐园芦荟胶 </a>
-								</li>
-							</ul>
-							<div class="tabs-panel">
-								<a href="" class="store-join-btn" title="申请商家入驻；已提交申请，可查看当前审核状态。"></a>
-								<a href="" class="store-join-help"><i class="fa fa-cog"></i>登录商家管理中心</a>
-							</div>
-						<!--</div>-->
+								{{/each}}
+							</script>
+						</ul>
+						<div class="tabs-panel">
+							<a href="" class="store-join-btn" title="申请商家入驻；已提交申请，可查看当前审核状态。"></a>
+							<a href="" class="store-join-help"><i class="fa fa-cog"></i>登录商家管理中心</a>
+						</div>
+						
 					</div>
 				</div>
 				
-				<!--
-					<div>
-						
-					</div>
-				-->
 			</div>
 		</div>
 		<!--**************-->
-		<div class="ad-groups w1210">
-			<ul>
-				<li>
-					<a href="">
-						<img src="img/ad-groups/1473470102416850267.jpg"/>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="img/ad-groups/1476944435185611076.jpg"/>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="img/ad-groups/1477119642996745749.jpg"/>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="img/ad-groups/1478162529091774460.jpg"/>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="img/ad-groups/1477984762548458427.jpg"/>
-					</a>
-				</li>
-			</ul>
+		<div class="w1210" id="ad-groups">
+			<script id="ad" type="text/html">
+				<ul>
+					{{each imgsrc as src index}}
+					<li>
+						<a href="">
+							<img src="{{src}}"/>
+						</a>
+					</li>
+					{{/each}}
+				</ul>	
+			</script>
 		</div>
 		<!--****************-->
 		<div class="w1210 store-wall">
 			<a href="" class="store-wall-title">店铺街
 				<span>推荐店铺</span>
 			</a>
-			<div class="store-wall-content" id="store-wall-content">
-				<!--<div class="store-wall-ad">
-					<a href=""></a>
-				</div>
-				<table class="store-con" id="store-con">
-					
-				</table>-->
+			<div id="store-wall-content">
+				<!--template-->
 			</div>
 		</div>
 		<!--****************-->		
-		<div class="w1210 index-sale" id="index-sale">
-			
+		<div class="w1210" id="index-sale">
+			<!--template-->
 		</div>
 		<div class="w1210 floor">
 			<div class="floor-layout">
@@ -1261,7 +589,44 @@
 		<div id="placeholder"></div>
 	</body>
 	<script src="libs/jquery.min.js"></script>
-	<script src="libs/template.js"></script>
+	
+	
+	<script id="hotQuery" type="text/html">
+		{{each word as w index}}
+			{{if index!=0}}<li>|</li>{{/if}}
+			<li><a href="">{{w}}</a></li>
+		{{/each}}				
+	</script>
+	
+	
+	<script id="allCate" type="text/html">
+		{{each li as l index}}
+			<li><a href="">{{l.title}}</a><i class="fa fa-angle-right"></i>
+				<div class="categorys">
+					<div class="item-left">
+						{{each l.h4 as h index}}
+						<h4><a href=""><span>{{h}}</span><span><i class="fa fa-angle-right"></i></span></a></h4>
+						{{/each}}
+						<div class="subitems">
+                          {{each l.dl as d index}}
+							<dl class="fore1">
+								<dt><a href="">{{d.dt}}<i class="fa fa-angle-right"></i></a></dt>
+								<dd>
+									{{each d.dd as a index}}
+										<a href="">{{a}}</a>
+									{{/each}}
+								</dd>
+							</dl>
+							{{/each}}
+						</div>
+					</div>
+					<div class="item-right">
+						
+					</div>
+				</div>
+			</li>
+		{{/each}}
+	</script>
 	
 	<script id="tab" type="text/html">
 		<div class="store-wall-ad">
@@ -1307,4 +672,5 @@
 	
 	<script src="js/carousel.js"></script>
 	<script src="js/login-regist.js"></script>
+
 </html>

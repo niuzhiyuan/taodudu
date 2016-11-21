@@ -80,12 +80,12 @@ $(".tabs").children().mouseenter(function(e){
 	if($(e.target).index()){
 		$(".tabs").children().eq(0).removeClass("tabs-selected")
 		$(".tabs").children().eq(1).addClass("tabs-selected");
-		$(".mall-news").css("display","none")
+		$("#mall-news").css("display","none")
 		$(".tabs-panel").css("display","block")
 	}else{
 		$(".tabs").children().eq(1).removeClass("tabs-selected")
 		$(".tabs").children().eq(0).addClass("tabs-selected");
-		$(".mall-news").css("display","block")
+		$("#mall-news").css("display","block")
 		$(".tabs-panel").css("display","none")
 	}
 })

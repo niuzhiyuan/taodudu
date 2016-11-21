@@ -241,40 +241,41 @@ ul li{
 	border: none;
 	color: white;
 	font-size: 16px;
-}.hot-query{
+}
+#hot-query{
 
 	margin-top: 8px;
 }
-.hot-query li{
+#hot-query li{
 	float: left;
 	font-size: 13px;
 	color: #DDDDDD;
 	margin-right: 11px;
 }
-.hot-query li a{
+#hot-query li a{
 	color: #999999;
 	text-decoration: none;
 }
-.hot-query li a:hover{
+#hot-query li a:hover{
 	color: #E31939;
 }
-.header-right{
+#header-right{
 
 	margin-left: 118px;
 }
-.header-right li{
+#header-right li{
 	float: left;
 	transition: transform 0.3s;
 }
-.header-right li:hover{
+#header-right li:hover{
 	transform: scale(1.2,1.2);
 }
-.header-right li a{
+#header-right li a{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
-.header-right li a img{
+#header-right li a img{
 	width: 100%;
 	height: 100%;
 }
@@ -340,24 +341,24 @@ ul li{
 .main-banner{
 	position: relative;
 }
-.all-cate{
+#all-cate{
 	background-color: #F7EBF0;
 	width: 210px;
 	height: 100%;
 	display: inline-block;
 }
-.all-cate li{
+#all-cate li{
 	padding-left: 10px;
 	padding-top: 8px;
 	padding-right: 10px;
 	height: calc(100%/13);
 
 }
-.all-cate>li:hover{
+#all-cate>li:hover{
 	background-color: white;
 	
 }
-.all-cate>li:hover .categorys{
+#all-cate>li:hover .categorys{
 	display: block;
 }
 /*****分类******/
@@ -453,12 +454,12 @@ ul li{
 	font-size: 12px!important;
 }
 /*---------*/
-.all-cate li a{
+#all-cate li a{
 	color: #333333;
 	text-decoration: none;
 	font-size: 14px;
 }
-.all-cate>li>i{
+#all-cate>li>i{
 	float: right;
 	color: #9D9DAB;
 	padding-top: 4px;
@@ -505,20 +506,20 @@ ul li{
 	cursor: pointer;
 }
 /*-*/
-.trigeminy{
+#trigeminy{
 	width: 100%;
 }
-.trigeminy section{
+#trigeminy section{
 	float: left;
 	width: calc(100%/3);
 	height: 149px;
 }
-.trigeminy section a{
+#trigeminy section a{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
-.trigeminy section img{
+#trigeminy section img{
 	width: 100%;
 	height: 100%;
 }
@@ -665,16 +666,16 @@ ul li{
 	overflow: hidden;
 	display: none;
 }
-.mall-news{
+#mall-news{
 	margin: 0;
 	padding: 3px;
 	background-color: white;
 }
-.mall-news li{
+#mall-news li{
 	padding: 0px 8px;
 	padding-top: 1px;
 }
-.mall-news a{
+#mall-news a{
 	color: #666666;
 	text-decoration: none;
 	font-size: 12px;
@@ -684,7 +685,7 @@ ul li{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-.mall-news a:hover{
+#mall-news a:hover{
 	color: #E31939;
 }
 
@@ -712,24 +713,24 @@ ul li{
 	padding: 3px;
 }
 /***-------------------------*/
-.ad-groups{
+#ad-groups{
 	margin-top: 15px;
 }
-.ad-groups ul{
+#ad-groups ul{
 	height: 350px;
 	display: flex;
 	justify-content: space-between;
 }
-.ad-groups li{
+#ad-groups li{
 	width: 238px;
 	height: 100%;
 }
-.ad-groups li a{
+#ad-groups li a{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
-.ad-groups li img{
+#ad-groups li img{
 	width: 100%;
 	height: 100%;
 }
@@ -778,7 +779,7 @@ ul li{
 }
 .store-con td{
 	width: calc(100%/6);
-	height: 100%
+	
 	border-top: 1px solid #F0F0F0;
 	border-right: 1px solid #F0F0F0;
 }
@@ -796,7 +797,7 @@ ul li{
 	height: 45px;
 }
 /*---------------*/
-.index-sale{
+#index-sale{
 	margin-top: 10px;
 }
 .tabs-option{
@@ -868,8 +869,15 @@ ul li{
 
 }
 .goods-price span{
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: keep-all;
+	vertical-align: bottom;
 	color: #E31939;
 	font-size: 16px;
+	max-width: 100px;
+	height: 22px;
 }
 .tabs-sale-goods li p a{
 	font-size: 12px;
@@ -1250,6 +1258,10 @@ ul li{
 /**-*-*-*-*-*-*-*-*-*-**/
 #placeholder{
 	width: 1210px;
-	height: 2000px;
+	height: 507px;
 	background-color: white;
+	
+	position: relative;
+    
+    margin: 0 auto;
 }

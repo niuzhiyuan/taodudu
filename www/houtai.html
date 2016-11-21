@@ -20,7 +20,7 @@
 		<div id="dianpu">
 			<form action="" method="post" id="street-form">
 				<label for="dianpujie">店铺街</label><br />
-				<input type="number" name="identifier" id="dianpujie" max="24" value=""/><br />
+				<input type="number" name="identifier" id="dianpujie" min="1" max="24"  value=""/><br />
 				<label for="imgsrc">图片名</label><br />
 				<input type="text" name="imgsrc" id="imgsrc" value="" />
 				<input type="submit" value="修改"/>
@@ -68,11 +68,11 @@
 						
 				</select>
 				<label>图片路径</label>
-				<input type="text" name="imgsrc" id="" value="" /><br />
+				<input type="text" name="imgsrc" id="" value="" autocomplete="off"/><br />
 				<label>描述</label>
 				<textarea name="desc" rows="7" cols="50"></textarea><br />
 				<label>价格</label>
-				<input type="text" name="price" id="" value="" /><br />
+				<input type="text" name="price" id="" value="" autocomplete="off"/><br />
 				<input type="submit" value="修改"/>
 			</form>
 		</div>
@@ -87,16 +87,22 @@
 			$.post("/guanli",data,function(resData){
 				if(resData.err == 0){
 					alert(resData.msg);
+					$("#")
 				}
 			});
 		})
 		$("#street-form").submit(function(e){
 			e.preventDefault();
+			if($("#dianpujie").val()>24&&$("#dianpujie").val()<1){
+				alert("错误的序号")
+				return;
+			}
 			var data = $("#street-form").serialize();
 			console.log(data)
 			$.post("/guanli",data,function(resData){
 				if(resData.err == 0){
 					alert(resData.msg);
+					
 				}
 			});
 		})
